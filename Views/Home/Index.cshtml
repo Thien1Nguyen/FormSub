@@ -1,0 +1,35 @@
+﻿@model Form
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-controller="Home" asp-action="Create" method="POST"
+        class="border border border-dark border-1 rounded p-3">
+        <div class="mb-3">
+            <label asp-for="Name">Name <span class="text-danger" asp-validation-for="Name"></span> </label>
+            <input type="text" asp-for="Name" class=" w-25"> 
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DOB">Date Of Birth <span class="text-danger" asp-validation-for="DOB"></span> </label>
+            <input type="date" asp-for="DOB" class=" w-25"> 
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="Email">Email <span class="text-danger" asp-validation-for="Email"></span> </label>
+            <input type="text" asp-for="Email" class=" w-25"> 
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password">Password <span class="text-danger" asp-validation-for="Password"></span> </label>
+            <input type="password" asp-for="Password" class=" w-25"> 
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="FavOddNum">FavOddNum <span class="text-danger" asp-validation-for="FavOddNum"></span> </label>
+            <input type="text" asp-for="FavOddNum" class=" w-25"> 
+        </div>
+        <button class="btn btn-danger w-25 createBtn">Build</button>
+    </form>
+</div>
